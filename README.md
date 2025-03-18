@@ -17,6 +17,10 @@ One of the things that we did was pull out all of the ip address using regex:
 
   grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
 
+There were many duplicates so we piped the ouput into sort -u 
+
+  grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | sort -u
+
 We also ran a custom bash script on the log file to automate some of these manual tasks. That bash
 script is called Lookup.sh and you can find that in this repo as well. It accepts a log file as 
 input, extracts the ip address using the above regex, sorts them to remove duplicates and prints the
