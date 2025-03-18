@@ -1,0 +1,641 @@
+[14]BOOT0 commit : 507a5f56de
+[23]dram size =64
+[69]kernel_addr:40008000
+[120]#
+[121]Jump to Linux (40008000)...,dtb (41d00000)
+[14]BOOT0 commit : 507a5f56de
+[23]dram size =64
+[69]kernel_addr:40008000
+[120]#
+[121]Jump to Linux (40008000)...,dtb (41d00000)
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.241952] will run init ...
+starting pid 405, tty '': '/bin/mount -o remount,rw /'
+starting pid 407, tty '': '/bin/mkdir -p /dev/pts'
+starting pid 408, tty '': '/bin/mkdir -p /dev/shm'
+starting pid 409, tty '': '/bin/mount -a'
+[0000000488][W] ciapp(v:249) run build:Jul 11 2024 08:18:12
+
+starting pid 410, tty '': '/etc/init.d/rcS boot'
+Server started, listening on port 8888...
+[0000000520][I] wakeup_type: 0
+[0000000522][I] fua_nn_get_param 1 25 1 1
+[0000000524][I] sensor_isp_config_read idx0 venc:2 wdr:0 w&h:1280x720 ir_mode:1 light_enable 0 ,light_def:30, flicker: 1 fps 20
+[0000000529][I] fua_video_get_config preview_resolution 0 wdr_mode 0 wifi_test_mode 0
+warn:aw_video02 <AWVideoInput_Start:715> 0 IOCTL_START failed pause
+
+[0000000534][I] wlan_mode 0 connect_state 0
+[0000000537][E] MAIN_CHANNEL AWVideoInput_Start error, retry 0
+
+[0000000539][I] fua_audio_start sampleRate 16000 wakeup_type 0 volume 100 40 80...
+[0000000589][I] .get vbr param: MaxBitRate = 2048, MovingTh = 20, quality = 10, I&PFrmBitsCoef = 10, 10[0000000590][W] ready_ok
+
+[0000000593][I] some_task start
+starting pid 436, tty '/dev/console': '-/bin/sh'
+
+
+BusyBox v1.27.2 () built-in shell (ash)
+
+ _____  _              __     _
+|_   _||_| ___  _ _   |  |   |_| ___  _ _  _ _
+  | |   _ |   ||   |  |  |__ | ||   || | ||_'_|
+  | |  | || | || _ |  |_____||_||_|_||___||_,_|
+  |_|  |_||_|_||_|_|  Tina is Based on OpenWrt!
+ ----------------------------------------------
+ Tina Linux (Neptune, 5C1C9C53)
+ ----------------------------------------------
+
+root@(none):/# [0000000660][I] firmware version: 1.7.9  
+[0000000660][I] not update firmware
+[0000000660][I] get_wifi_data waitting..., register_flag 0
+[0000000671][W] WAKEUP_TYPE_POWERON
+
+[0000000671][I] fua_set_day_night_mod day_night_mod 0
+[0000000749][I] common_i_amr2pcm /system/snd/en/power_up.amr /tmp/sound16k.pcm OK, len 30080
+[0000000750][I] play_audio_amr_2 /tmp/sound16k.pcm 85.
+[0000000797][I] fua_video_set_encoder_level ch[4] qp 35 51 -> 31 35
+[0000000797][I] fua_video_set_encoder_level ch[4] bitrate 1200 -> 1500
+[0000000851][I] fua_audio_play_set_volume 85
+[0000001052][I] change to day mode
+[0000001052][I] fua_video_set_encoder_level ch[0] qp 35 51 -> 31 35
+[0000001053][I] fua_video_set_encoder_level ch[0] bitrate 2000 -> 1500
+[0000002228][I] play_audio_amr_2 /tmp/sound16k.pcm 85 end
+[0000005196][I] wlan_mode 0 connect_state 1
+[0000005197][I] ifconfig eonet 192.168.254.47 netmask 255.255.255.0
+[0000005204][I] ifconfig eonet hw ether 8c:28:4b:80:53:79
+[0000005211][I] route add default gw 192.168.254.254
+[0000005217][I] echo nameserver 192.168.254.254 > /etc/resolv.conf
+[0000005250][I] common_get_pir 130
+[0000005250][I] common_get_some_data 356 0 0 207 0
+[0000005251][I] common_get_fw_version 1.7.9 2.4.9
+[0000005251][I] common_set_timezone GMT+4:0
+[0000005251][I] device_cloud_init: 9 oss-us-west-1.aliyuncs.com usw-aiwit
+[0000005251][I] common_get_some_data 356 0 0 207 0
+[0000005251][I] web_server_send_msg request: CHECK_SERVER_IP
+[0000006361][I] httpclient_ssl_conn connect:405 handshake:704 all:1109ms
+[0000006773][I] web_server_send_msg respond: {"resultCode":0,"msg":"","content":{"cmd_servers":[{"ip":"47.243.113.135","port":8888,"udp_port":25050,"ssl_port":8890,"tls_port":8891}],"heartbeat_protocol":"tcp","enable_encryption":0,"enable_encryption2":1,"enable_tls_encryption":1,"heartbeat_xor_encryption":1,"udp_servers":[{"port":25050,"ip":"47.243.191.100"}],"tcp_servers":[{"ip":"47.254.95.196","port":9007,"ssl_port":9207,"xor_port":9307}],"tcp_xor_servers":[{"ip":"47.251.117.26","port":9307}],"oss_setting":{"ossFromId":1,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usadoorbell"},"oss_setting_v2":{"ossFromId":9,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usw-aiwit"},"local_time":"2025-03-13 12:17:59","current_time":1741882679,"sleep_interval":15,"tcp_sleep_interval":60,"is_test":0,"p2p_servers":[{"ip":"47.243.228.110","port":17051}],"iso_code":"us","p2p_encrypt_servers":[{"ip":"47.243.228.110","port":37051}],"reverse_proxy_servers":[{"ip":"198.11.178.53","cmd_port":9007,"stream_[0000006773][I] web_server_send_msg respond: CHECK_SERVER_IP, len:1143
+[0000006775][I] resave p2p_servers 47.243.228.110:17051
+[0000006775][I] resave p2p tls servers 47.243.228.110:102587
+[0000006775][I] resave thumbjpg_servers: http://47.243.228.110:58720
+[0000006776][I] resave https thumbjpg_servers: https://push.gdxp.com
+[0000006784][I] save_app_server_config OK
+[0000006784][I] common_get_some_data 356 0 0 207 0
+[0000006785][I] web_server_send_msg request: GET_OSS_CONFIG
+[0000007895][I] httpclient_ssl_conn connect:232 handshake:878 all:1110ms
+[0000008204][I] web_server_send_msg respond: {"resultCode":0,"msg":"","content":[{"ossFromId":9,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usw-aiwit"}]}
+[0000008204][I] web_server_send_msg respond: GET_OSS_CONFIG, len:123
+[0000010210][I] factory not connect...
+[0000010217][W] common_i_stream_stop is stop
+
+[0000010221][I] audio_play_task end
+[0000010221][I] audio_capture_task end
+[0000010233][I] fua_audio_stop
+[0000010278][I] some_task stop
+[0000010710][I] fua_video_stop
+[0000010811][I] set_other_data_flag param=1
+[0000010812][I] cmd_server_keepalive: connect to [47.251.117.26-9307] ssl 1
+[0000010813][I] set_wow_info
+  mooooooooooooo
+
+
+
+
+[14]BOOT0 commit : 507a5f56de
+[23]dram size =64
+[69]kernel_addr:40008000
+[120]#
+[121]Jump to Linux (40008000)...,dtb (41d00000)
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.241949] will run init ...
+starting pid 405, tty '': '/bin/mount -o remount,rw /'
+starting pid 407, tty '': '/bin/mkdir -p /dev/pts'
+starting pid 408, tty '': '/bin/mkdir -p /dev/shm'
+starting pid 409, tty '': '/bin/mount -a'
+[0000000488][W] ciapp(v:249) run build:Jul 11 2024 08:18:12
+
+starting pid 410, tty '': '/etc/init.d/rcS boot'
+Server started, listening on port 8888...
+[0000000520][I] wakeup_type: 1
+[0000000522][I] fua_nn_get_param 1 25 1 1
+[0000000523][I] nn_thread_main run
+[0000000525][I] sensor_isp_config_read idx0 venc:2 wdr:0 w&h:1280x720 ir_mode:1 light_enable 0 ,light_def:30, flicker: 1 fps 20
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+000000000000000000000000
+[0000000531][I] fua_video_get_config preview_resolution 0 wdr_mode 0 wifi_test_mode 0
+[0000000533][I] wlan_mode 0 connect_state 1
+[0000000533][I] ifconfig eonet 192.168.254.47 netmask 255.255.255.0
+warn:aw_video02 <AWVideoInput_Start:715> 0 IOCTL_START failed pause
+
+[0000000540][E] MAIN_CHANNEL AWVideoInput_Start error, retry 0
+
+[0000000575][I] ifconfig eonet hw ether 8c:28:4b:80:53:79
+[0000000598][I] route add default gw 192.168.254.254
+[0000000618][I] echo nameserver 192.168.254.254 > /etc/resolv.conf
+[0000000625][I] fua_audio_start sampleRate 16000 wakeup_type 1 volume 40 40 80...
+Version: AWNN_LIB_1.0.4
+[0xb6d9dd64]vip_init[104], 
+The version of Viplite is: 1.8.0-0-AW-2022-04-21
+[0000000647][W] ready_ok
+
+
+starting pid 441, tty '/dev/console': '-/bin/sh'
+[0000000653][I] some_task start
+
+
+BusyBox v1.27.2 () built-in shell (ash)
+
+VIPLite driver version=0x00010800...
+[0000000669][I] firmware version: 1.7.9  
+[0000000669][I] not update firmware
+[0000000669][I] get_wifi_data waitting..., register_flag 0
+[0000000683][W] WAKEUP_TYPE_WIFI
+
+[0000000698][I] common_get_pir 130
+[0000000698][I] common_get_some_data 356 0 0 202 0
+[0000000698][I] common_get_fw_version 1.7.9 2.4.9
+[0000000699][I] common_set_timezone GMT+4:0
+[0000000699][I] device_cloud_init: 9 oss-us-west-1.aliyuncs.com usw-aiwit
+[0000000700][I] fua_set_day_night_mod day_night_mod 2
+ _____  _              __     _
+|_   _||_| ___  _ _   |  |   |_| ___  _ _  _ _
+  | |   _ |   ||   |  |  |__ | ||   || | ||_'_|
+  | |  | || | || _ |  |_____||_||_|_||___||_,_|
+  |_|  |_||_|_||_|_|  Tina is Based on OpenWrt!
+ ----------------------------------------------
+ Tina Linux (Neptune, 5C1C9C53)
+ ----------------------------------------------
+[0000000713][I] common_get_some_data 356 0 0 202 0
+[0000000714][I] web_server_send_msg request: CHECK_SERVER_IP
+[0000000736][I] .get vbr param: MaxBitRate = 2048, MovingTh = 20, quality = 10, I&PFrmBitsCoef = 10, 10[0000000744][I] fua_video_capture_jpg start
+[0000000797][I] fua_video_set_encoder_level ch[0] qp 35 51 -> 31 35
+[0000000798][I] fua_video_set_encoder_level ch[0] bitrate 2000 -> 1500
+[0000000798][I] fua_video_set_encoder_level ch[4] qp 35 51 -> 31 35
+[0000000798][I] fua_video_set_encoder_level ch[4] bitrate 1200 -> 1500
+[0000000799][I] fua_nn_get_first_frame Ok
+root@(none):/# [0000000858][I] nn_init /system/human.nb, 384x224, mem_size 2752512, thresh 0.250000
+[0000000892][I] AAC rtcp_handle aebc40
+[0000000895][I] Speaker rtcp_handle a856f0
+[0000000896][I] rtp_send_enable_set 0
+[0000000896][I] rtp_send_relay_enable_set 0
+[0000000896][I] rtp_stream_start:done
+[0000000898][I] cmd_server_start: connect to [47.243.113.135-8891] ssl 2 (2)
+[0000001042][I] fua_video_capture_jpg to /tmp/snap.jpg
+UPNP_DeletePortMapping() failed with code : 714
+ExternalIPAddress = 75.89.41.219
+InternalIP:Port = 192.168.254.47:53818
+external 75.89.41.219:53680 UDP is redirected to internal 192.168.254.47:53818 (duration=604800)
+Connection Type : IP_Routed
+Status : Connected, uptime=1618692s, LastConnectionError : ERROR_NONE
+  Time started : Sat Dec 13 02:21:49 1969
+MaxBitRateDown : 512000 bps (512 Kbps)   MaxBitRateUp 512000 bps (512 Kbps)
+ExternalIPAddress = 75.89.41.219
+Bytes:   Sent: 3442314630	Recv: 2439204200
+Packets: Sent: 37716720	Recv: 164344748
+[0000001661][I] httpclient_ssl_conn connect:233 handshake:714 all:947ms
+[0000001947][I] web_server_send_msg respond: {"resultCode":0,"msg":"","content":{"cmd_servers":[{"ip":"47.243.113.135","port":8888,"udp_port":25050,"ssl_port":8890,"tls_port":8891}],"heartbeat_protocol":"tcp","enable_encryption":0,"enable_encryption2":1,"enable_tls_encryption":1,"heartbeat_xor_encryption":1,"udp_servers":[{"port":25050,"ip":"47.243.191.100"}],"tcp_servers":[{"ip":"47.254.95.196","port":9007,"ssl_port":9207,"xor_port":9307}],"tcp_xor_servers":[{"ip":"47.251.117.26","port":9307}],"oss_setting":{"ossFromId":1,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usadoorbell"},"oss_setting_v2":{"ossFromId":9,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usw-aiwit"},"local_time":"2025-03-13 12:18:23","current_time":1741882703,"sleep_interval":15,"tcp_sleep_interval":60,"is_test":0,"p2p_servers":[{"ip":"47.243.228.110","port":17051}],"iso_code":"us","p2p_encrypt_servers":[{"ip":"47.243.228.110","port":37051}],"reverse_proxy_servers":[{"ip":"198.11.178.53","cmd_port":9007,"stream_[0000001949][I] web_server_send_msg respond: CHECK_SERVER_IP, len:1143
+[0000001950][I] resave p2p_servers 47.243.228.110:17051
+[0000001950][I] resave p2p tls servers 47.243.228.110:102587
+[0000001950][I] resave thumbjpg_servers: http://47.243.228.110:58720
+[0000001950][I] resave https thumbjpg_servers: https://push.gdxp.com
+[0000001955][I] save_app_server_config OK
+[0000001955][I] common_get_some_data 356 0 0 202 0
+[0000001956][I] web_server_send_msg request: GET_OSS_CONFIG
+[0000002104][I] change to night mode
+[0000002136][I] Protocol: TLSv1.2 Ciphersuite: TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256, connect:224 handshake:1014 all:1238 ms
+[0000002137][I] cmd_server_send_data[131073]
+[0000002137][I] cmd_server_start:done
+[0000002137][I] stream_to_save_start 15 0 21 0
+[0000002137][I] eo_thread_create heartbeat_monition_thread OK, once 0
+[0000002138][I] Local IP: 192.168.254.47
+[0000002459][I] PAYLOAD_TYPE_SET_WIFI_EVENT_COME_IN 
+[0000002888][I] httpclient_ssl_conn connect:264 handshake:668 all:932ms
+[0000003154][I] [V:13.00(7.00)(0) 6.00(7.00)(0) (R:0 0 0 1) (wdr:0)][A: 25.00(49.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 8192 -1 25 38 0 2][ADC: 0 0(-70 -134 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 0 0 1206412 2 43 1045019005 41991100][BITRATE:0 0][NN:0 9 9 level:25][ip:192.168.254.47][66 81818181 0 1300][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000003155][I] cmd_server_send_data[131087]
+[0000003166][I] web_server_send_msg respond: {"resultCode":0,"msg":"","content":[{"ossFromId":9,"endpoint":"http:\/\/oss-us-west-1.aliyuncs.com","bucket":"usw-aiwit"}]}
+[0000003166][I] web_server_send_msg respond: GET_OSS_CONFIG, len:123
+[0000003293][I] cmd_server_msg_proc[131090]
+[0000003294][I] eo_thread_create rtp_monition_thread OK, once 0
+[0000003294][I] rtp_send_enable_set 1
+[0000003294][I] rtp_send_relay_enable_set 1
+[0000003294][I] fua_video_force_IFrame to 4
+[0000003295][I] common_set_isp_param
+[0000003295][I] rtp_stream_set_address: 47.89.245.202 48808 37367 46523
+[0000003303][I] common_set_datetime 2025-03-14 00:18:24
+[0000003304][I] common_set_pir_limit 120 2 120
+[0000003304][I] common_set_url_match_ip url[0] http://api.gdxp.com ip 47.243.76.250
+[0000003304][I] common_set_url_match_ip url[1] https://api.v2.gdxp.com ip 47.242.7.157
+[0000003304][I] common_notify_stream_start 
+[0000003304][I] cmd_server_send_data[131090]
+[0000003307][I] [KCP (relay_video): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000003312][I] stream_to_save_thread_main run
+[0000003313][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000003314][I] eo_thread_create stream_to_save_monition_thread OK, once 0
+[0000003314][I] stream_write_muxer_to_cloude audio first pts 747
+[0000003314][I] stream_write_muxer_to_cloude video first pts 747
+[0000003323][I] cmd_server_msg_proc[131093]
+[0000003323][I] cmd_server_send_data[131093]
+[0000003373][I] save_app_mtu_config OK
+[0000003449][I] common_get_clients   value = 1
+[0000003449][I] clients_cnt 1, relay_enable 1, relay_rate 0.00 Kb/s
+[0000003617][I] rtp_stream_send_video eo_queue_get_list empty
+[0000003723][I] httpclient_ssl_conn connect:81 handshake:312 all:393ms
+[0000003960][I] nextposition 44208
+[0000004532][I] httpclient_ssl_conn connect:64 handshake:247 all:311ms
+[0000004649][I] nextposition 55484
+[0000005762][I] httpclient_ssl_conn connect:68 handshake:267 all:335ms
+[0000005881][I] nextposition 65988
+[0000006216][I] httpclient_ssl_conn connect:69 handshake:266 all:335ms
+[0000006263][I] [V:5.00(9.00)(0) 3.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 1 -1 0 206 -1 16 27 31 2][ADC: 0 0(-63 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 0 0 1206412 2 43 1045019005 41991100][BITRATE:6 6][NN:0 3 3 level:25][ip:192.168.254.47][66 670074 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000006974][I] httpclient_ssl_conn connect:77 handshake:259 all:336ms
+[0000007136][I] nextposition 81004
+[0000008158][I] httpclient_ssl_conn connect:70 handshake:256 all:326ms
+[0000008247][I] nextposition 88016
+[0000008311][I] [KCP (relay_video): 0 93 0 255 93 | 0 0 0 | 0 0 0 | 9489 451]
+[0000008318][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000008448][I] rtp_send_relay_enable_set 0
+[0000008448][I] clients_cnt 1, relay_enable 0, relay_rate 6.00 Kb/s
+[0000009278][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 35 -1 6 12 9 2][ADC: 0 0(-64 -131 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 60281 8768 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][68 700071 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000009354][I] httpclient_ssl_conn connect:65 handshake:249 all:314ms
+[0000009459][I] nextposition 97544
+[0000010172][I] cmd_server_msg_proc[131087]
+[0000010172][I] common_get_some_data 356 0 0 202 0
+[0000010172][I] cmd_server_send_data[131087]
+[0000010954][I] httpclient_ssl_conn connect:67 handshake:250 all:317ms
+[0000011112][I] nextposition 111840
+[0000012157][I] httpclient_ssl_conn connect:67 handshake:257 all:324ms
+[0000012256][I] nextposition 118520
+[0000012284][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 37 -1 12 22 8 2][ADC: 0 0(-65 -130 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 60281 8768 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][68 700071 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000013314][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 46 9]
+[0000013325][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000013368][I] httpclient_ssl_conn connect:69 handshake:257 all:326ms
+[0000013452][I] clients_cnt 1, relay_enable 0, relay_rate 2.00 Kb/s
+[0000013471][I] nextposition 128556
+[0000014962][I] httpclient_ssl_conn connect:69 handshake:244 all:313ms
+[0000015131][I] nextposition 142036
+[0000015299][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 34 -1 14 25 6 2][ADC: 0 0(-67 -129 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 20681 5198 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000016163][I] httpclient_ssl_conn connect:70 handshake:251 all:321ms
+[0000016255][I] nextposition 149564
+[0000017359][I] httpclient_ssl_conn connect:66 handshake:245 all:311ms
+[0000017455][I] nextposition 160580
+[0000018316][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 102 -1 16 28 7 2][ADC: 0 0(-65 -129 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 25216 5202 1206412 2 43 1045019005 41971100][BITRATE:5 5][NN:0 4 4 level:25][ip:192.168.254.47][69 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000018318][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000018330][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000018979][I] httpclient_ssl_conn connect:67 handshake:263 all:330ms
+[0000019138][I] nextposition 174036
+[0000020266][I] cmd_server_msg_proc[131087]
+[0000020266][I] common_get_some_data 356 0 0 205 0
+[0000020267][I] cmd_server_send_data[131087]
+[0000020269][I] httpclient_ssl_conn connect:67 handshake:254 all:321ms
+[0000020364][I] nextposition 181308
+[0000021324][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 36 -1 6 12 8 2][ADC: 0 0(-65 -131 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 25216 5202 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][69 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000021371][I] httpclient_ssl_conn connect:65 handshake:253 all:318ms
+[0000021476][I] nextposition 191560
+[0000022992][I] httpclient_ssl_conn connect:65 handshake:259 all:324ms
+[0000023147][I] nextposition 206208
+[0000023319][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000023336][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000024173][I] httpclient_ssl_conn connect:66 handshake:243 all:309ms
+[0000024265][I] nextposition 213032
+[0000024344][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 33 -1 12 23 7 2][ADC: 0 0(-65 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 28344 7582 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000025386][I] httpclient_ssl_conn connect:65 handshake:258 all:323ms
+[0000025483][I] nextposition 223968
+[0000026974][I] httpclient_ssl_conn connect:65 handshake:246 all:311ms
+[0000027128][I] nextposition 238096
+[0000027355][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 34 -1 13 25 8 2][ADC: 0 0(-65 -134 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 28344 7582 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000028274][I] httpclient_ssl_conn connect:66 handshake:245 all:311ms
+[0000028322][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000028342][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000028379][I] nextposition 245032
+[0000029396][I] httpclient_ssl_conn connect:69 handshake:253 all:322ms
+[0000029496][I] nextposition 254100
+[0000030201][I] cmd_server_msg_proc[131087]
+[0000030201][I] common_get_some_data 356 0 0 201 0
+[0000030202][I] cmd_server_send_data[131087]
+[0000030377][I] [V:4.00(10.00)(0) 2.00(10.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 126 -1 17 28 6 2][ADC: 0 0(-65 -135 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24062 5180 1206412 2 43 1045019005 41981100][BITRATE:6 6][NN:0 4 4 level:25][ip:192.168.254.47][69 700065 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000031002][I] httpclient_ssl_conn connect:69 handshake:259 all:328ms
+[0000031153][I] nextposition 268332
+[0000032187][I] httpclient_ssl_conn connect:69 handshake:246 all:315ms
+[0000032287][I] nextposition 274864
+[0000033326][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000033351][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000033392][I] httpclient_ssl_conn connect:67 handshake:240 all:307ms
+[0000033425][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 39 -1 7 13 7 2][ADC: 0 0(-64 -134 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21957 5180 1206412 2 43 1045019005 41981100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][67 700065 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000033501][I] nextposition 285784
+[0000034993][I] httpclient_ssl_conn connect:65 handshake:246 all:311ms
+[0000035160][I] nextposition 299808
+[0000036219][I] httpclient_ssl_conn connect:66 handshake:263 all:329ms
+[0000036344][I] nextposition 306664
+[0000036443][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 43 -1 13 24 8 2][ADC: 0 0(-65 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21957 5180 1206412 2 43 1045019005 41981100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000037402][I] httpclient_ssl_conn connect:66 handshake:246 all:312ms
+[0000037502][I] nextposition 315936
+[0000038333][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000038363][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000039025][I] httpclient_ssl_conn connect:73 handshake:256 all:329ms
+[0000039199][I] nextposition 329956
+[0000039462][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(512) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 35 -1 15 26 6 2][ADC: 0 0(-65 -131 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21316 5142 1206412 2 43 1045019005 41981100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][68 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000040210][I] cmd_server_msg_proc[131087]
+[0000040210][I] common_get_some_data 356 0 0 199 0
+[0000040210][I] cmd_server_send_data[131087]
+[0000040223][I] httpclient_ssl_conn connect:67 handshake:257 all:324ms
+[0000040322][I] nextposition 337076
+[0000041519][I] httpclient_ssl_conn connect:69 handshake:254 all:323ms
+[0000041620][I] nextposition 345876
+[0000042571][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 126 -1 18 31 7 2][ADC: 0 0(-66 -133 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21316 5142 1206412 2 43 1045019005 41981100][BITRATE:5 5][NN:0 3 3 level:25][ip:192.168.254.47][68 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000043037][I] httpclient_ssl_conn connect:72 handshake:251 all:323ms
+[0000043210][I] nextposition 360108
+[0000043335][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000043374][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000044223][I] httpclient_ssl_conn connect:65 handshake:253 all:318ms
+[0000044314][I] nextposition 367920
+[0000045441][I] httpclient_ssl_conn connect:66 handshake:260 all:326ms
+[0000045578][I] nextposition 379080
+[0000045690][I] [V:3.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 45 -1 9 17 7 2][ADC: 0 0(-65 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21553 5100 1206412 2 43 1045019005 41971100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][73 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000047052][I] httpclient_ssl_conn connect:69 handshake:264 all:333ms
+[0000047201][I] nextposition 394276
+[0000048236][I] httpclient_ssl_conn connect:67 handshake:255 all:322ms
+[0000048327][I] nextposition 402572
+[0000048340][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000048383][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000048732][I] [V:1.00(10.00)(0) 0.00(10.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(63.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 43 -1 17 28 8 2][ADC: 0 0(-64 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 30535 7753 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][72 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000049341][I] httpclient_ssl_conn connect:66 handshake:259 all:325ms
+[0000049436][I] nextposition 414512
+[0000050218][I] cmd_server_msg_proc[131087]
+[0000050219][I] common_get_some_data 356 0 0 201 0
+[0000050219][I] cmd_server_send_data[131087]
+[0000051043][I] httpclient_ssl_conn connect:67 handshake:262 all:329ms
+[0000051208][I] nextposition 428184
+[0000051754][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(61.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 35 -1 18 31 9 2][ADC: 0 0(-62 -131 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 30535 7753 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][72 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000052237][I] httpclient_ssl_conn connect:71 handshake:244 all:315ms
+[0000052328][I] nextposition 433820
+[0000053346][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000053390][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000053466][I] httpclient_ssl_conn connect:69 handshake:265 all:334ms
+[0000053560][I] nextposition 442740
+ [0000054765][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 126 -1 8 15 6 2][ADC: 0 0(-61 -131 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23850 5253 1206412 2 43 1045019005 41971100][BITRATE:6 6][NN:0 4 4 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000055043][I] httpclient_ssl_conn connect:70 handshake:250 all:320ms
+[0000055203][I] nextposition 456860
+ [0000056237][I] httpclient_ssl_conn connect:69 handshake:246 all:315ms
+[0000056350][I] nextposition 463396
+oo[0000057443][I] httpclient_ssl_conn connect:69 handshake:242 all:311ms
+[0000057542][I] nextposition 474200
+[0000057774][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 39 -1 10 17 7 2][ADC: 0 0(-60 -132 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23850 5253 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][67 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+oo[0000058353][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000058392][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+o[0000059051][I] httpclient_ssl_conn connect:69 handshake:249 all:318ms
+o[0000059208][I] nextposition 488000
+o[0000060226][I] cmd_server_msg_proc[131087]
+[0000060226][I] common_get_some_data 356 0 0 202 0
+[0000060226][I] cmd_server_send_data[131087]
+[0000060251][I] httpclient_ssl_conn connect:69 handshake:243 all:312ms
+o[0000060364][I] nextposition 494608
+o[0000060795][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 34 -1 15 28 8 2][ADC: 0 0(-61 -130 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 28078 7510 1206412 2 43 1045019005 41981100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][69 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+oo[0000061570][I] httpclient_ssl_conn connect:66 handshake:258 all:324ms
+[0000061666][I] nextposition 504256
+oo[0000063059][I] httpclient_ssl_conn connect:66 handshake:249 all:315ms
+[0000063214][I] nextposition 518780
+[0000063356][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000063403][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+oo[0000063819][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 32 -1 18 33 6 2][ADC: 0 0(-62 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 25404 5220 1206412 2 43 1045019005 41991100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][73 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000064253][I] httpclient_ssl_conn connect:65 handshake:242 all:307ms
+[0000064352][I] nextposition 526432
+ooo[0000065462][I] httpclient_ssl_conn connect:66 handshake:248 all:314ms
+[0000065564][I] nextposition 536132
+oooo[0000066926][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 39 -1 7 15 8 2][ADC: 0 0(-59 -125 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 25404 5220 1206412 2 43 1045019005 41991100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][73 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000067106][I] httpclient_ssl_conn connect:97 handshake:254 all:351ms
+[0000067272][I] nextposition 550444
+oooo[0000068365][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000068411][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000068491][I] httpclient_ssl_conn connect:66 handshake:270 all:336ms
+[0000068590][I] nextposition 558932
+o[0000069567][I] httpclient_ssl_conn connect:69 handshake:247 all:316ms
+o[0000069683][I] nextposition 568012
+oo[0000069938][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 202 -1 11 20 7 2][ADC: 0 0(-57 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21590 5090 1206412 2 43 1045019005 41971100][BITRATE:6 6][NN:0 3 3 level:25][ip:192.168.254.47][67 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000070220][I] cmd_server_msg_proc[131087]
+[0000070220][I] common_get_some_data 356 0 0 196 0
+[0000070220][I] cmd_server_send_data[131087]
+ooo[0000071088][I] httpclient_ssl_conn connect:66 handshake:256 all:322ms
+[0000071248][I] nextposition 582544
+[0000072280][I] httpclient_ssl_conn connect:66 handshake:252 all:318ms
+[0000072377][I] nextposition 590260
+[0000072944][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 91 -1 17 29 8 2][ADC: 0 0(-59 -129 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21590 5090 1206412 2 43 1045019005 41971100][BITRATE:3 3][NN:0 4 4 level:25][ip:192.168.254.47][67 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000073368][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000073415][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000073499][I] httpclient_ssl_conn connect:69 handshake:267 all:336ms
+[0000073595][I] nextposition 601472
+[0000075090][I] httpclient_ssl_conn connect:67 handshake:259 all:326ms
+[0000075256][I] nextposition 615128
+[0000075962][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 34 -1 19 33 8 2][ADC: 0 0(-59 -130 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23478 5129 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][67 700068 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000076296][I] httpclient_ssl_conn connect:66 handshake:254 all:320ms
+[0000076391][I] nextposition 622300
+[0000077511][I] httpclient_ssl_conn connect:67 handshake:264 all:331ms
+[0000077608][I] nextposition 632260
+[0000078376][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000078421][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000078985][I] [V:4.00(10.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 32 -1 8 15 7 2][ADC: 0 0(-62 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22097 5124 1206412 2 43 1045019005 41971100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][66 700068 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000079112][I] httpclient_ssl_conn connect:70 handshake:266 all:336ms
+[0000079264][I] nextposition 647128
+[0000080252][I] cmd_server_msg_proc[131087]
+[0000080252][I] common_get_some_data 356 0 0 198 0
+[0000080252][I] cmd_server_send_data[131087]
+[0000080494][I] httpclient_ssl_conn connect:68 handshake:253 all:321ms
+[0000080586][I] nextposition 654380
+[0000081723][I] httpclient_ssl_conn connect:69 handshake:276 all:345ms
+[0000081810][I] nextposition 662652
+[0000082004][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 85 -1 12 21 7 2][ADC: 0 0(-61 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22097 5124 1206412 2 43 1045019005 41971100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][66 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000083116][I] httpclient_ssl_conn connect:65 handshake:265 all:330ms
+[0000083260][I] nextposition 676128
+[0000083379][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000083431][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000084303][I] httpclient_ssl_conn connect:65 handshake:258 all:323ms
+[0000084411][I] nextposition 683076
+[0000085034][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 123 -1 18 30 8 2][ADC: 0 0(-62 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24005 7334 1206412 2 43 1045019005 41961100][BITRATE:4 4][NN:0 3 3 level:25][ip:192.168.254.47][66 700065 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000085515][I] httpclient_ssl_conn connect:68 handshake:248 all:316ms
+[0000085618][I] nextposition 692592
+[0000087111][I] httpclient_ssl_conn connect:68 handshake:256 all:324ms
+[0000087272][I] nextposition 706856
+[0000088042][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 41 -1 8 16 6 2][ADC: 0 0(-60 -129 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24005 7334 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][66 700065 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000088321][I] httpclient_ssl_conn connect:66 handshake:266 all:332ms
+[0000088386][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000088410][I] nextposition 713360
+[0000088433][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000089524][I] httpclient_ssl_conn connect:67 handshake:258 all:325ms
+[0000089650][I] nextposition 725380
+[0000090239][I] cmd_server_msg_proc[131087]
+[0000090239][I] common_get_some_data 356 0 0 206 0
+[0000090239][I] cmd_server_send_data[131087]
+[0000091066][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 72 -1 10 18 7 2][ADC: 0 0(-62 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24235 5056 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][70 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000091136][I] httpclient_ssl_conn connect:71 handshake:271 all:342ms
+[0000091301][I] nextposition 739996
+[0000092331][I] httpclient_ssl_conn connect:72 handshake:249 all:321ms
+[0000092440][I] nextposition 746244
+[0000093392][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000093448][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000093530][I] httpclient_ssl_conn connect:70 handshake:250 all:320ms
+[0000093650][I] nextposition 755596
+[0000094084][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 169 -1 12 22 6 2][ADC: 0 0(-60 -126 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 27152 7544 1206412 2 43 1045019005 41961100][BITRATE:6 6][NN:0 4 4 level:25][ip:192.168.254.47][67 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000095124][I] httpclient_ssl_conn connect:65 handshake:256 all:321ms
+[0000095327][I] nextposition 769232
+[0000096329][I] httpclient_ssl_conn connect:66 handshake:254 all:320ms
+[0000096425][I] nextposition 776648
+[0000097099][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 37 -1 18 32 7 2][ADC: 0 0(-60 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 27152 7544 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][67 700071 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000097528][I] httpclient_ssl_conn connect:65 handshake:250 all:315ms
+[0000097657][I] nextposition 788736
+[0000098392][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000098456][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000099153][I] httpclient_ssl_conn connect:67 handshake:264 all:331ms
+[0000099305][I] nextposition 803688
+[0000100124][I] [V:1.00(10.00)(0) 0.00(10.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 35 -1 9 16 9 2][ADC: 0 0(-60 -129 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22252 5178 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][66 700080 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000100262][I] cmd_server_msg_proc[131087]
+[0000100262][I] common_get_some_data 356 0 0 200 0
+[0000100263][I] cmd_server_send_data[131087]
+[0000100331][I] httpclient_ssl_conn connect:67 handshake:252 all:319ms
+[0000100427][I] nextposition 811788
+[0000101536][I] httpclient_ssl_conn connect:68 handshake:248 all:316ms
+[0000101644][I] nextposition 822584
+[0000103129][I] httpclient_ssl_conn connect:68 handshake:242 all:310ms
+[0000103144][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 61 -1 11 20 7 2][ADC: 0 0(-60 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22252 5178 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][66 700080 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000103287][I] nextposition 836160
+[0000103399][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000103459][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000104348][I] httpclient_ssl_conn connect:68 handshake:258 all:326ms
+[0000104443][I] nextposition 843748
+[0000105547][I] httpclient_ssl_conn connect:67 handshake:257 all:324ms
+[0000105642][I] nextposition 854284
+[0000106171][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 205 -1 13 23 7 2][ADC: 0 0(-57 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23790 5207 1206412 2 43 1045019005 41961100][BITRATE:5 5][NN:0 4 4 level:25][ip:192.168.254.47][66 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000107153][I] httpclient_ssl_conn connect:66 handshake:252 all:318ms
+[0000107308][I] nextposition 867868
+[0000108402][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000108459][I] httpclient_ssl_conn connect:66 handshake:260 all:326ms
+[0000108471][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000108555][I] nextposition 874592
+[0000109294][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 205 -1 19 33 8 2][ADC: 0 0(-55 -126 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 19908 5124 1206412 2 43 1045019005 41951100][BITRATE:6 6][NN:0 3 3 level:25][ip:192.168.254.47][68 700067 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000109676][I] httpclient_ssl_conn connect:84 handshake:251 all:335ms
+[0000109769][I] nextposition 883120
+[0000110253][I] cmd_server_msg_proc[131087]
+[0000110253][I] common_get_some_data 356 0 0 203 0
+[0000110253][I] cmd_server_send_data[131087]
+[0000111178][I] httpclient_ssl_conn connect:70 handshake:263 all:333ms
+[0000111327][I] nextposition 897028
+[0000112314][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][0 0 0 0 -1 0 35 -1 10 19 6 2][ADC: 0 0(-54 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 19908 5124 1206412 2 43 1045019005 41951100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][68 700070 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000112422][I] fua_audio_play_set_volume 80
+[0000112463][I] httpclient_ssl_conn connect:66 handshake:255 all:321ms
+[0000112569][I] nextposition 904716
+[0000113405][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000113474][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000113617][I] httpclient_ssl_conn connect:69 handshake:308 all:377ms
+[0000113710][I] nextposition 913736
+[0000115209][I] httpclient_ssl_conn connect:66 handshake:287 all:353ms
+[0000115332][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 26.00(51.00)(512) volume:40 80][125 0 3 0 -1 0 34 -1 13 23 7 2][ADC: 0 0(-56 -125 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24894 5235 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][74 700069 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000115368][I] nextposition 930280
+[0000116318][I] httpclient_ssl_conn connect:69 handshake:295 all:364ms
+[0000116419][I] nextposition 940692
+[0000117382][I] httpclient_ssl_conn connect:76 handshake:251 all:327ms
+[0000117472][I] nextposition 953084
+[0000118344][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(512) 9.00(18.00)(0) volume:40 80][169 0 0 0 -1 0 60 -1 14 25 10 2][ADC: 0 0(-58 -123 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24894 5235 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 3 3 level:25][ip:192.168.254.47][74 700069 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000118408][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000118489][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000119194][I] httpclient_ssl_conn connect:67 handshake:259 all:326ms
+[0000119346][I] nextposition 967092
+[0000120263][I] cmd_server_msg_proc[131087]
+[0000120263][I] common_get_some_data 356 0 0 209 0
+[0000120264][I] cmd_server_send_data[131087]
+[0000120400][I] httpclient_ssl_conn connect:66 handshake:268 all:334ms
+[0000120502][I] nextposition 974212
+[0000121375][I] [V:4.00(10.00)(0) 2.00(10.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 180 -1 5 9 7 2][ADC: 0 0(-58 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 31860 13678 1206412 2 43 1045019005 41961100][BITRATE:5 5][NN:0 4 4 level:25][ip:192.168.254.47][68 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000121599][I] httpclient_ssl_conn connect:69 handshake:269 all:338ms
+[0000121703][I] nextposition 983312
+[0000123199][I] httpclient_ssl_conn connect:67 handshake:267 all:334ms
+[0000123354][I] nextposition 996840
+[0000123415][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000123497][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000124402][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 37 -1 11 20 8 2][ADC: 0 0(-57 -126 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24260 5064 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][66 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000124403][I] httpclient_ssl_conn connect:66 handshake:262 all:328ms
+[0000124536][I] nextposition 1003488
+[0000125608][I] httpclient_ssl_conn connect:66 handshake:268 all:334ms
+[0000125701][I] nextposition 1013992
+[0000127208][I] httpclient_ssl_conn connect:68 handshake:265 all:333ms
+[0000127358][I] nextposition 1028800
+[0000127424][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(61.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 33 -1 13 24 7 2][ADC: 0 0(-57 -128 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 24260 5064 1206412 2 43 1045019005 41961100][BITRATE:0 0][NN:0 4 4 level:25][ip:192.168.254.47][66 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000128392][I] httpclient_ssl_conn connect:69 handshake:251 all:320ms
+[0000128420][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000128491][I] nextposition 1034808
+[0000128506][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000129615][I] httpclient_ssl_conn connect:66 handshake:272 all:338ms
+[0000129704][I] nextposition 1044188
+[0000130300][I] cmd_server_msg_proc[131087]
+[0000130300][I] common_get_some_data 356 0 0 206 0
+[0000130301][I] cmd_server_send_data[131087]
+[0000130445][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 32.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 38 -1 15 26 7 2][ADC: 0 0(-55 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23518 5228 1206412 2 43 1045019005 41971100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][69 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000131213][I] httpclient_ssl_conn connect:71 handshake:258 all:329ms
+[0000131361][I] nextposition 1058036
+[0000132402][I] httpclient_ssl_conn connect:65 handshake:244 all:309ms
+[0000132498][I] nextposition 1066088
+[0000133420][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000133455][I] [V:4.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 173 -1 5 11 8 2][ADC: 0 0(-55 -126 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 23518 5228 1206412 2 43 1045019005 41971100][BITRATE:6 6][NN:0 3 3 level:25][ip:192.168.254.47][69 700066 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000133513][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000133602][I] httpclient_ssl_conn connect:70 handshake:250 all:320ms
+[0000133696][I] nextposition 1074436
+[0000135199][I] httpclient_ssl_conn connect:68 handshake:248 all:316ms
+[0000135359][I] nextposition 1089364
+[0000136488][I] [V:1.00(9.00)(0) 0.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 35 -1 11 20 6 2][ADC: 0 0(-55 -127 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 21908 5217 1206412 2 43 1045019005 41941100][BITRATE:1 1][NN:0 3 3 level:25][ip:192.168.254.47][66 700072 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000136503][I] httpclient_ssl_conn connect:67 handshake:243 all:310ms
+[0000136601][I] nextposition 1097788
+[0000137614][I] httpclient_ssl_conn connect:66 handshake:256 all:322ms
+[0000137714][I] nextposition 1107368
+[0000138426][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000138521][I] [KCP (p2p): 0 0 0 128 0 | 0 0 0 | 0 0 0 | 0 0]
+[0000139218][I] httpclient_ssl_conn connect:70 handshake:248 all:318ms
+[0000139368][I] nextposition 1121920
+[0000139533][I] [V:4.00(10.00)(0) 2.00(10.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1024) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 35 -1 14 25 8 2][ADC: 0 0(-55 -126 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22024 5021 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][70 700072 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000140307][I] cmd_server_msg_proc[131087]
+[0000140314][I] common_get_some_data 356 0 0 206 0
+[0000140315][I] cmd_server_send_data[131087]
+[0000140418][I] httpclient_ssl_conn connect:65 handshake:260 all:325ms
+[0000140510][I] nextposition 1128568
+[0000141627][I] httpclient_ssl_conn connect:67 handshake:257 all:324ms
+[0000141737][I] nextposition 1139916
+[0000142744][I] [V:3.00(9.00)(0) 2.00(9.00)(0) (R:0 0 0 1) (wdr:0)][A: 31.00(62.00)(1536) 0.00(0.00)(0) volume:40 80][169 0 0 0 -1 0 64 -1 18 30 7 2][ADC: 0 0(-59 -124 -74 348 430 431) 1][BAT: 1 100 AXP0_0_18-55-10][NET: 22024 5021 1206412 2 43 1045019005 41961100][BITRATE:1 1][NN:0 4 4 level:25][ip:192.168.254.47][70 700065 1440 1440][(tcp 47.251.117.26:74843)us,us4][351 39126]
+[0000143230][I] httpclient_ssl_conn connect:67 handshake:257 all:324ms
+[0000143402][I] nextposition 1154548
+[0000143432][I] [KCP (relay_video): 0 95 0 255 95 | 0 0 0 | 0 0 0 | 0 0]
+[0000143744][I] cmd_server_msg_proc[131081]
+[0000143747][W] ############# check standby 1
+
+[0000143773][I] stream_to_save_stop 1428 1412 2235 2207, 65
+p2p_main_deinit
+[0000143896][I] rtp_stream_stop:done
+[0000143896][I] common_get_some_data 356 0 0 207 0
+[0000143896][I] web_server_send_msg request: RECORD_FILEINFO
+[0000144742][I] httpclient_ssl_conn connect:242 handshake:603 all:845ms
+[0000145033][I] web_server_send_msg respond: {"resultCode":0,"msg":"","content":{}}
+[0000145033][I] web_server_send_msg respond: RECORD_FILEINFO, len:38
+[0000145033][I] common_get_some_data 356 0 0 207 0
+[0000145034][I] cmd_server_send_data[131100]
+[0000145258][I] cmd_server_msg_proc[131100]
+[0000145271][I] cmd_server_stop:done
+[0000145367][I] some_task stop
+[0000145481][I] nn_thread_main exit
+[0000145484][I] audio_play_task end
+[0000145484][I] audio_capture_task end
+[0000145495][I] fua_audio_stop
+[0000145930][I] fua_video_stop
+[0000146031][I] set_other_data_flag param=1
+[0000146032][I] cmd_server_keepalive: connect to [47.251.117.26-9307] ssl 1
+[0000146033][I] set_wow_info
+                                                                                   
