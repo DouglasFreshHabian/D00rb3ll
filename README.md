@@ -1,5 +1,5 @@
 # D00rb3ll
-This repo contains files that go along with my youtube series on Iot Hacking a Video Camera Doorbell
+This repo contains files that go along with my youtube series on IoT Hacking a Video Camera Doorbell
 
 I will update the repository as we progress through the series. The first video was posted and is
 titled, "Hacking an IoT Video Doorbell - What's Inside?". The youtube link to view the video is:
