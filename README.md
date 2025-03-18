@@ -30,4 +30,7 @@ If you have not done so already, please head over to the channel at the followin
   
   https://www.youtube.com/@DouglasHabian-tq5ck
 
-and hit that subscribe button to show some support. Thank you...
+and hit that subscribe button to show some support. Thank you...!
+
+[Thumbnail-1](https://github.com/user-attachments/assets/4bb68eea-3c79-4a0c-b6dc-674db5c345fe)
+
