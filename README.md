@@ -1,16 +1,17 @@
-# D00rb3ll
+# 📷 D00rb3ll
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=IoT_Hacking&desc=D00rb3ll&animation=blinkingrender&fontSize=90" />
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=18ACF7&width=435&lines=Information+Gathering+%26+Recon...;Obtaining+%26+Analyzing+the+Firmware;Extracting+%26+Analyzing+the+Filesystem;Emulation+%26+Dynamic+Analysis...;Runtime+Analysis+%26+Exploitation..." alt="Typing SVG" /></a>
 
-## About
-This repo contains files that go along with my youtube series on IoT Hacking a Video Camera Doorbell. I will update the repository as we progress through the series. 
+# About
+#### This repo contains files that go along with my youtube series on IoT Hacking a Video Camera Doorbell. I will update the repository as we progress through the series. 
 
-## Video 1.
-The first video was posted and is titled, "Hacking an IoT Video Doorbell - What's Inside?". The youtube link to view the video is:
-  
-# 🔗 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+## 🔗 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+
+## ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
+
+## The first video was posted and is titled, ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
 In this video we gained a non-interactive shell on an IoT device by connecting a usb-to-ttl adpater
 to the RX and TX pads on the board of the device. We used `minicom` for a serial shell with a baud 
@@ -18,6 +19,7 @@ rate of 115200. Though we could not interact with the device we were able to vie
 boot up logs, which allows us to learn a lot about the device. This device is using an operating
 system called Tina Linux. 
 
+## Bootlogs
 I have included the bootlogs file in this repo so that you can follow along with the first video.
 One of the things that we did was pull out all of the ip address using regex:
 
@@ -39,12 +41,11 @@ the ip address, `geoiplookup` and `whois`. It prints the results to the screeen 
 to a file. As of right now, it only deals with ip addresses. Perhaps we can add the some sort of
 similiar functionality for urls too...
 
-If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you...!
+If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
-# 🔗  [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck)
-  
-
+## 🔗 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
 
 
-[Thumbnail-1](https://github.com/user-attachments/assets/4bb68eea-3c79-4a0c-b6dc-674db5c345fe)
+
+
 
