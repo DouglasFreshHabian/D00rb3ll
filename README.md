@@ -1,4 +1,10 @@
 # D00rb3ll
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=IoT_Hacking&desc=D00rb3ll&animation=blinkingrender&fontSize=90" />
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=18ACF7&width=435&lines=Information+Gathering+%26+Recon...;Obtaining+%26+Analyzing+the+Firmware;Extracting+%26+Analyzing+the+Filesystem;Emulation+%26+Dynamic+Analysis...;Runtime+Analysis+%26+Exploitation..." alt="Typing SVG" /></a>
+
+## About
 This repo contains files that go along with my youtube series on IoT Hacking a Video Camera Doorbell
 
 I will update the repository as we progress through the series. The first video was posted and is
