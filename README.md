@@ -141,6 +141,24 @@ To unpack the firmware and extract embedded files or hidden elements, I used bin
 ```
 ## Basic Analysis of the Firmware Filesystem: 🗃🕵️
 
+
+
+## Contributing & Collaboration
+
+This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
+
+## Ongoing Reverse Engineering Efforts
+
+As I continue to reverse engineer the firmware, I will document my findings and methodologies here. 
+
+  
+
+## Feedback & Questions
+
+Your thoughts, questions, and feedback are greatly appreciated! Feel free to open an issue or leave a comment. Let’s collaborate and make this project even better.
+
+Thank you for checking out ***D00rb3ll***. Stay tuned for future updates, and happy reverse engineering!
+
 ### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
 ## 👍 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
