@@ -7,6 +7,7 @@
 # About
 ### This repo contains files that go along with my youtube series on IoT Hacking a Video Camera Doorbell. I will update the repository as we progress through the series. 
 
+## Video 1.
 # 📷 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
 ## ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
@@ -40,6 +41,11 @@ installed, checks for an internet connection and proceeds to execute two command
 the ip address, `geoiplookup` and `whois`. It prints the results to the screeen and saves the results
 to a file. As of right now, it only deals with ip addresses. Perhaps we can add the some sort of
 similiar functionality for urls too...
+
+## Video 2.
+# 📷 ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+
+## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
 
 ### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
