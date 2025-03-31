@@ -50,8 +50,12 @@ system called Tina Linux.
    minicom -D /dev/ttyUSB0 -b 115200 -C Bootlogs.txt
 ```
 ### Let's quicky breakdown this command:
-
-
+```
+minicom
+ -D, --device              # Specify the device, typically attached to '/dev/ttyUSB0' in the Linux filesystem
+ -b, --baudrate            # Specify the baud rate, typically a value of 115200 and then perhaps 9600 
+ -C, --capturefile=FILE    # Open capture file at startup and whatever you get on the screen get saved to a logfile.
+```
 
 ## 👢 [Bootlogs](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Bootlogs.txt)
 I have included the bootlogs file in this repo so that you can follow along with the first video.
