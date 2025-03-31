@@ -94,11 +94,11 @@ The name of this operating system is ***Tina Linux.*** If you haven't done so al
          Tina Linux (Neptune, 5C1C9C53)
          ----------------------------------------------
 ```
->**Tip:**
+>**💡Tip:**
 > You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
 
 
-# 📷 ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV) 
+# ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV) 
 
 ## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
@@ -237,7 +237,7 @@ $ john hash.txt --show
   
        1 password hash cracked, 0 left
  ```
-## Password: 🗝 The password for the root user is <ins>tina</ins>
+## Password: 🗝 The password for the root user is <ins>tina.</ins>
 I think it's safe to say that ***tina*** comes from ***Tina Linux*** and that implies that default passwords are being used. I was able to verify this by performing the same steps on another doorbell, same manufacturer. 
 The password was in fact the same, ***tina***. 
 
