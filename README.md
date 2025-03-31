@@ -139,6 +139,28 @@ Then compare image 1 with image 2 and if there are no differences, you know you 
 ```bash
    diff --side-by-side doorbell-1.bin doorbell-2.bin
 ```
+## Before we begin analysis, it's a good idea to first get a hash of the image:
+There are several command line utilities that we could use for this including `sha256sum,` `sha512sum` and `md5sum.`
+
+Getting a md5 hash:
+```bash
+   md5sum firmware.bin
+   5169b9d806903c2df8c07f6d6ec06171  doorbellfirm.bin
+```
+
+Getting a sha256 hash:
+```bash
+   sha256sum firmware.bin
+   59df39887e8e72a9d9b0847bbf7a73aa9afacf9fa5ec1a771493160e470f2131  doorbellfirm.bin
+```
+
+Getting a sha512 hash:
+```bash
+   sha512sum firmware.bin
+   090ba7fcc514530399953de1e65dfc08851aabf08905eab21d501c0630900d445deda27634b5f70b5fe3861ffa735d001987ece7739f31e84a3e8c2f03a0b178  doorbellfirm.bin
+
+```
+
 ## Basic Analysis of the Firmware: 💻🕵️  
 To gather basic strings and identify potential embedded information in the firmware before performing further analysis:
 Commands:
