@@ -205,7 +205,7 @@ hash.txt outside of the firmware image's filesystem.
 
 ```bash
    $ cat hash.txt
-
+      
       root:91rMiZzGliXHM:1:0:99999:7:::
 ```
 To install John:
@@ -216,29 +216,31 @@ To install John:
 And finally, the only thing needed is to run `john` on the file containing the hash, no options:
 
 ```bash
-   [~]$ john hash.txt
+   $ john hash.txt
 
-          Created directory: /home/kali/.john
-          Using default input encoding: UTF-8
-          Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
-          Will run 4 OpenMP threads
-          Proceeding with single, rules:Single
-          Press 'q' or Ctrl-C to abort, almost any other key for status
-          Almost done: Processing the remaining buffered candidate passwords, if any.
-          Proceeding with wordlist:/usr/share/john/password.lst
-          tina             (root)     
-          1g 0:00:00:01 DONE 2/3 (2025-03-31 08:15) 0.9803g/s 26739p/s 26739c/s 26739C/s 123456..HALLO
-          Use the "--show" option to display all of the cracked passwords reliably
-          Session completed. 
+       Created directory: /home/kali/.john
+       Using default input encoding: UTF-8
+       Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
+       Will run 4 OpenMP threads
+       Proceeding with single, rules:Single
+       Press 'q' or Ctrl-C to abort, almost any other key for status
+       Almost done: Processing the remaining buffered candidate passwords, if any.
+       Proceeding with wordlist:/usr/share/john/password.lst
+       tina             (root)     
+       1g 0:00:00:01 DONE 2/3 (2025-03-31 08:15) 0.9803g/s 26739p/s 26739c/s 26739C/s 123456..HALLO
+       Use the "--show" option to display all of the cracked passwords reliably
+       Session completed. 
 
-          [~]$ john hash.txt --show
-          root:tina:1:0:99999:7:::
+$ john hash.txt --show
+
+       root:tina:1:0:99999:7:::
   
-          1 password hash cracked, 0 left
-          
-          ```
+       1 password hash cracked, 0 left
+ ```
+## Password: 🗝 The password for the root user is <ins>tina</ins>
+I think it's safe to say that ***tina*** comes from ***Tina Linux*** and that implies that default passwords are being used. I was able to verify this by performing the same steps on another doorbell, same manufacturer. 
+The password was in fact the same, ***tina***. 
 
-🗝fr
 ## Contributing & Collaboration: 🤝
 
 #### This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
