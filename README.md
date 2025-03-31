@@ -14,7 +14,6 @@ The goal of this project is to offer a transparent look into the firmware of a w
 Whether you’re a Linux enthusiast, a security researcher, a reverse engineer, or a hacker, this project aims to provide useful resources to help uncover how the firmware operates and potentially identify vulnerabilities, security flaws, or other points of interest.
 
 
-## Video 1.
 # 📷 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
 ## ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
@@ -35,11 +34,10 @@ Whether you’re a Linux enthusiast, a security researcher, a reverse engineer, 
 
 ## Methodology: 🔍🌍
 
-In this video we gained a non-interactive shell on an IoT device by connecting a usb-to-ttl adpater
+In this video we gained a non-interactive shell on an IoT device by connecting a *usb-to-ttl* adpater
 to the RX and TX pads on the board of the device. We used `minicom` for a serial shell with a baud 
-rate of 115200. Though we could not interact with the device we were able to view and capture the
-boot up logs, which allows us to learn a lot about the device. This device is using an operating
-system called Tina Linux. 
+rate of **115200**. Though we could not interact with the device we were able to view and capture the
+boot up logs, which allowed us to learn a lot about the device.  
 
 ### Determine the name & location of the usb-to-ttl adapter when it is plugged in:
 ```bash
@@ -71,7 +69,7 @@ There were many duplicates so we piped the ouput into `sort -u`
 ```
 
 We also ran a custom `bash` script on the log file to automate some of these manual tasks. That bash
-script is called `Lookup.sh` and you can find that in this repo as well. It accepts a log file as 
+script is called [Lookup.sh](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Lookup.sh) and you can find that in this repo as well. It accepts a log file as 
 input, extracts the ip address using the above regex, sorts them to remove duplicates and prints the
 remaining address to the screen with a total count. It then checks to see if you have `geoiplookup`
 installed, checks for an internet connection and proceeds to execute two commands on each one of
@@ -79,12 +77,32 @@ the ip address, `geoiplookup` and `whois`. It prints the results to the screeen 
 to a file. As of right now, it only deals with ip addresses. Perhaps we can add the some sort of
 similiar functionality for urls too...
 
-## Video 2.
-# 📷 ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+We learned a lot about this firmware just from a log file. One of perhaps the most important things, was that it is using a Linux based operating system based of off ***OpenWRT***. 
+The name of this operating system is ***Tina Linux.*** If you haven't done so already, go over to my youtube channel, hit that like button, subscribe and check out the next video...
+
+```bash
+   $sed -n '36,47p' Bootlogs.txt
+
+    BusyBox v1.27.2 () built-in shell (ash)
+
+       _____  _              __     _
+      |_   _||_| ___  _ _   |  |   |_| ___  _ _  _ _
+        | |   _ |   ||   |  |  |__ | ||   || | ||_'_|
+        | |  | || | || _ |  |_____||_||_|_||___||_,_|
+        |_|  |_||_|_||_|_|  Tina is Based on OpenWrt!
+       ----------------------------------------------
+       Tina Linux (Neptune, 5C1C9C53)
+       ----------------------------------------------
+```
+>**Tip:**
+> You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
+
+
+# 📷 ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV) 
 
 ## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
-The firmware here was extracted using a CH341A SPI programmer and the `flashrom` utility. The resulting firmware image, merkury.bin, is shared in its raw form, enabling anyone to dive into static analysis, emulation, or any other form of research.
+The firmware here was extracted using a CH341A SPI programmer and the `flashrom` utility. The resulting firmware image, doorbell.bin, is shared in its raw form, enabling anyone to dive into static analysis, emulation, or any other form of research.
 
 
 ## Tools: 🛠
@@ -104,6 +122,9 @@ Probe for the flash chip:
 ```bash
    flashrom --programmer ch341a_spi
 ```
+>**Important:**
+> Always probe first to try and get the name of the chip.
+
 Read and dump the firmware:
 ```bash
     flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-1.bin
@@ -133,35 +154,81 @@ Commands:
 ## Unpacking the Firmware: 🔐🌐
 To unpack the firmware and extract embedded files or hidden elements, I used binwalk:
 ```bash
-   binwalk merkury.bin             # Ran with no options, binwalk will scan the image and print the results to the screen
+   binwalk doorbell.bin             # Ran with no options, binwalk will scan the image and print the results to the screen
 
-   binwalk -E merkury.bin          # Calculates file entropy which tells us whether the firmware is encrypted or not
+   binwalk -E doorbell.bin          # Calculates file entropy which tells us whether the firmware is encrypted or not
 
-   binwalk -eM merkury.bin         # Extract known file types (-e), and recursively scan extracted files (-M)
+   binwalk -eM doorbell.bin         # Extract known file types (-e), and recursively scan extracted files (-M)
 ```
 ## Basic Analysis of the Firmware Filesystem: 🗃🕵️
 
+#### We are performing *static* analysis, later in the series we look at *dynamic* analysis.
 
+##### Here are some of the things we are lookin for:
++ what's inside /etc/shadow and /etc/passwd
++ configuration files
++ script files
++ .bin files
++ keywords such as admin, password, remote, AWS keys, etc.
++ binaries such as ssh, tftp, dropbear, etc.
++ banned c functions
++ command injection vulnerable functions
++ URLs, email addresses and IP addresses
++ and more…
+
+#### Interesting... Inside of ***etc/passwd*** we find a **root** user with a shell! 
+```bash
+   cat passwd
+      root:$1$0WlvKUDR$.yqcW5hBKyVJKCHQ4njdB/:0:0:root:/root:/bin/ash
+      daemon:*:1:1:daemon:/var:/bin/false
+      ftp:*:55:55:ftp:/home/ftp:/bin/false
+      network:*:101:101:network:/var:/bin/false
+      nobody:*:65534:65534:nobody:/var:/bin/false
+```
+#### Next we check the **shadow** file:
+```bash
+   cat shadow
+      root:91rMiZzGliXHM:1:0:99999:7:::
+      daemon:*:0:0:99999:7:::
+      ftp:*:0:0:99999:7:::
+      network:*:0:0:99999:7:::
+      nobody:*:0:0:99999:7:::
+```
 
 ## Contributing & Collaboration
 
-This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
+#### This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
 
-## Ongoing Reverse Engineering Efforts
+## Ongoing Reverse Engineering Efforts:🥈🏆🥉
 
-As I continue to reverse engineer the firmware, I will document my findings and methodologies here. 
+## Here is our firmware testing checklist: 📋
+- [x] Information Gathering & Recon
+- [x] Obtaining firmware
+- [x] Analyzing firmware
+- [x] Extracting the filesystem
+- [x] Anaylzying the filesystem
+- [ ] Emulating firmware
+- [ ] Dynamic analysis
+- [ ] Runtime analysis
+- [ ] Binary Exploitaion
+#### As I continue to reverse engineer the firmware, I will document my findings and methodologies here. 
 
-  
-
-## Feedback & Questions
+## Feedback & Questions:❓❔❓
 
 Your thoughts, questions, and feedback are greatly appreciated! Feel free to open an issue or leave a comment. Let’s collaborate and make this project even better.
 
-Thank you for checking out ***D00rb3ll***. Stay tuned for future updates, and happy reverse engineering!
+Thank you for checking out ***[D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
+
+
+## Resources: [FreshPdfLibrary](https://github.com/DouglasFreshHabian/FreshPdfLibrary)
+In this repo, you find the guide that I am using in this series as well as a lot more!!!
 
 ### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
 ## 👍 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
+
+                                                                             
+
 
 
 
