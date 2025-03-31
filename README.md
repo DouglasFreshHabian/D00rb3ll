@@ -45,7 +45,7 @@ similiar functionality for urls too...
 ## Video 2.
 # 📷 ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
-## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
+## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
 ### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
