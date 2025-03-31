@@ -81,18 +81,18 @@ We learned a lot about this firmware just from a log file. One of perhaps the mo
 The name of this operating system is ***Tina Linux.*** If you haven't done so already, go over to my youtube channel, hit that like button, subscribe and check out the next video...
 
 ```bash
-   $sed -n '36,47p' Bootlogs.txt
+   $ sed -n '36,47p' Bootlogs.txt
 
-    BusyBox v1.27.2 () built-in shell (ash)
+        BusyBox v1.27.2 () built-in shell (ash)
 
-       _____  _              __     _
-      |_   _||_| ___  _ _   |  |   |_| ___  _ _  _ _
-        | |   _ |   ||   |  |  |__ | ||   || | ||_'_|
-        | |  | || | || _ |  |_____||_||_|_||___||_,_|
-        |_|  |_||_|_||_|_|  Tina is Based on OpenWrt!
-       ----------------------------------------------
-       Tina Linux (Neptune, 5C1C9C53)
-       ----------------------------------------------
+         _____  _              __     _
+        |_   _||_| ___  _ _   |  |   |_| ___  _ _  _ _
+          | |   _ |   ||   |  |  |__ | ||   || | ||_'_|
+          | |  | || | || _ |  |_____||_||_|_||___||_,_|
+          |_|  |_||_|_||_|_|  Tina is Based on OpenWrt!
+         ----------------------------------------------
+         Tina Linux (Neptune, 5C1C9C53)
+         ----------------------------------------------
 ```
 >**Tip:**
 > You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
@@ -160,11 +160,11 @@ To unpack the firmware and extract embedded files or hidden elements, I used bin
 
    binwalk -eM doorbell.bin         # Extract known file types (-e), and recursively scan extracted files (-M)
 ```
-## Basic Analysis of the Firmware Filesystem: 🗃🕵️
+## Basic Analysis of the Firmware's Filesystem: 🗃🕵️
 
-#### We are performing *static* analysis, later in the series we look at *dynamic* analysis.
+#### We are performing <ins>*static*</ins> analysis, later in the series we look at <ins>*dynamic*</ins> analysis.
 
-##### Here are some of the things we are lookin for:
+##### Here are some of the things we are looking for:
 + what's inside /etc/shadow and /etc/passwd
 + configuration files
 + script files
@@ -176,26 +176,65 @@ To unpack the firmware and extract embedded files or hidden elements, I used bin
 + URLs, email addresses and IP addresses
 + and more…
 
-#### Interesting... Inside of ***etc/passwd*** we find a **root** user with a shell! 
+#### Interesting... Inside of the <ins>passwd</ins> file we find a *root* user with a shell!
+
 ```bash
-   cat passwd
+
+  $ cat passwd
+
       root:$1$0WlvKUDR$.yqcW5hBKyVJKCHQ4njdB/:0:0:root:/root:/bin/ash
       daemon:*:1:1:daemon:/var:/bin/false
       ftp:*:55:55:ftp:/home/ftp:/bin/false
       network:*:101:101:network:/var:/bin/false
       nobody:*:65534:65534:nobody:/var:/bin/false
 ```
-#### Next we check the **shadow** file:
+#### Next we check the <ins>**shadow**</ins> file:
+
 ```bash
-   cat shadow
+   $ cat shadow
+
       root:91rMiZzGliXHM:1:0:99999:7:::
       daemon:*:0:0:99999:7:::
       ftp:*:0:0:99999:7:::
       network:*:0:0:99999:7:::
       nobody:*:0:0:99999:7:::
 ```
+#### This is easily crackable even for a noob! We're going to be using `john` also known as *John The Ripper.*
+We are only concerned with the first line of the `shadow` file. Copy that line and paste it into a file called
+hash.txt outside of the firmware image's filesystem.
 
-## Contributing & Collaboration
+```bash
+   $ cat hash.txt
+
+      root:91rMiZzGliXHM:1:0:99999:7:::
+```
+To install John:
+
+```bash
+   sudo apt install john
+```
+And finally, the only thing needed is to run `john` on the file containing the hash, no options:
+
+```bash
+
+┌──(kali㉿B6OC19UvUnHg)-[~]
+└─$ john hash.txt
+Created directory: /home/kali/.john
+Using default input encoding: UTF-8
+Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
+Will run 4 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst
+tina             (root)     
+1g 0:00:00:01 DONE 2/3 (2025-03-31 08:15) 0.9803g/s 26739p/s 26739c/s 26739C/s 123456..HALLO
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+```
+
+🗝fr
+## Contributing & Collaboration: 🤝
 
 #### This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
 
@@ -217,7 +256,7 @@ To unpack the firmware and extract embedded files or hidden elements, I used bin
 
 Your thoughts, questions, and feedback are greatly appreciated! Feel free to open an issue or leave a comment. Let’s collaborate and make this project even better.
 
-Thank you for checking out ***[D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
+Thank you for checking out [D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
 
 
 ## Resources: [FreshPdfLibrary](https://github.com/DouglasFreshHabian/FreshPdfLibrary)
@@ -225,9 +264,8 @@ In this repo, you find the guide that I am using in this series as well as a lot
 
 ### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
-## 👍 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
+## 👊 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
 
-                                                                             
 
 
 
