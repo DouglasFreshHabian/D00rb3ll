@@ -55,7 +55,7 @@ minicom
  -C, --capturefile=FILE    # Open capture file at startup and whatever you get on the screen get saved to a logfile.
 ```
 
-## 👢 [Bootlogs](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Bootlogs.txt)
+## 👢 [Bootlogs:](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Bootlogs.txt)
 I have included the bootlogs file in this repo so that you can follow along with the first video.
 One of the things that we did was pull out all of the ip address using regex:
 
