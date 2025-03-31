@@ -216,22 +216,27 @@ To install John:
 And finally, the only thing needed is to run `john` on the file containing the hash, no options:
 
 ```bash
+   [~]$ john hash.txt
 
-┌──(kali㉿B6OC19UvUnHg)-[~]
-└─$ john hash.txt
-Created directory: /home/kali/.john
-Using default input encoding: UTF-8
-Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
-Will run 4 OpenMP threads
-Proceeding with single, rules:Single
-Press 'q' or Ctrl-C to abort, almost any other key for status
-Almost done: Processing the remaining buffered candidate passwords, if any.
-Proceeding with wordlist:/usr/share/john/password.lst
-tina             (root)     
-1g 0:00:00:01 DONE 2/3 (2025-03-31 08:15) 0.9803g/s 26739p/s 26739c/s 26739C/s 123456..HALLO
-Use the "--show" option to display all of the cracked passwords reliably
-Session completed. 
-```
+          Created directory: /home/kali/.john
+          Using default input encoding: UTF-8
+          Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
+          Will run 4 OpenMP threads
+          Proceeding with single, rules:Single
+          Press 'q' or Ctrl-C to abort, almost any other key for status
+          Almost done: Processing the remaining buffered candidate passwords, if any.
+          Proceeding with wordlist:/usr/share/john/password.lst
+          tina             (root)     
+          1g 0:00:00:01 DONE 2/3 (2025-03-31 08:15) 0.9803g/s 26739p/s 26739c/s 26739C/s 123456..HALLO
+          Use the "--show" option to display all of the cracked passwords reliably
+          Session completed. 
+
+          [~]$ john hash.txt --show
+          root:tina:1:0:99999:7:::
+  
+          1 password hash cracked, 0 left
+          
+          ```
 
 🗝fr
 ## Contributing & Collaboration: 🤝
