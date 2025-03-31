@@ -122,7 +122,7 @@ Probe for the flash chip:
 ```bash
    flashrom --programmer ch341a_spi
 ```
->**Important:**
+>**💡Important:**
 > Always probe first to try and get the name of the chip.
 
 Read and dump the firmware:
