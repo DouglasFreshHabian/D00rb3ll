@@ -98,7 +98,7 @@ The name of this operating system is ***Tina Linux.*** If you haven't done so al
 > You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
 
 
-# ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV) 
+# ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/fGCQTk4-eE4?si=HizJNpvhUviEKrlf) 
 
 ## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
