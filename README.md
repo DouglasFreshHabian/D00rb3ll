@@ -14,9 +14,9 @@ The goal of this project is to offer a transparent look into the firmware of a w
 Whether you’re a Linux enthusiast, a security researcher, a reverse engineer, or a hacker, this project aims to provide useful resources to help uncover how the firmware operates and potentially identify vulnerabilities, security flaws, or other points of interest.
 
 
-# 📷 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+## 📷 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
-## ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
+### ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Thumbnail-1.png)
 
 ## The first video was posted and is titled, ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
@@ -55,7 +55,7 @@ minicom
  -C, --capturefile=FILE    # Open capture file at startup and whatever you get on the screen get saved to a logfile.
 ```
 
-## 👢 [Bootlogs:](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Bootlogs.txt)
+### 👢 [Bootlogs:](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Bootlogs.txt)
 I have included the bootlogs file in this repo so that you can follow along with the first video.
 One of the things that we did was pull out all of the ip address using regex:
 
@@ -98,9 +98,9 @@ The name of this operating system is ***Tina Linux.*** If you haven't done so al
 > You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
 
 
-# ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/fGCQTk4-eE4?si=HizJNpvhUviEKrlf) 
+## ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/fGCQTk4-eE4?si=HizJNpvhUviEKrlf) 
 
-## ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
+### ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
 The firmware here was extracted using a CH341A SPI programmer and the `flashrom` utility. The resulting firmware image, doorbell.bin, is shared in its raw form, enabling anyone to dive into static analysis, emulation, or any other form of research.
 
@@ -125,8 +125,11 @@ Probe for the flash chip:
 >**💡Important:**
 >Always probe first to try and get the name of the chip.
 ## Ok, Let's get hands on: ✋🤚 
+Read and dump the firmware:
 <details>
-<summary> Read and dump the firmware: </summary>
+  
+<summary>🖱Click here to expand</summary>
+
 Commands:
 ```bash
    flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-1.bin
@@ -146,7 +149,9 @@ Then compare image 1 with image 2 and if there are no differences, you know you 
 
 ## Before we begin analysis, it's a good idea to first get a hash of the image:
 <details>
-<summary> There are several command line utilities that we could use for this including sha256sum, sha512sum and md5sum. </summary>
+<summary>🖱Click here to expand</summary>
+
+There are several command line utilities that we could use for this including sha256sum, sha512sum and md5sum.
 
 Getting a md5 hash:
 ```bash
@@ -295,12 +300,12 @@ Your thoughts, questions, and feedback are greatly appreciated! Feel free to ope
 Thank you for checking out [D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
 
 
-## Resources: [FreshPdfLibrary](https://github.com/DouglasFreshHabian/FreshPdfLibrary)
+### Resources: [FreshPdfLibrary](https://github.com/DouglasFreshHabian/FreshPdfLibrary)
 In this repo, you find the guide that I am using in this series as well as a lot more!!!
 
-### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
+#### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
 
-## 👊 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
+### Support Me: 👊 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
 
 
 
