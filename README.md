@@ -170,7 +170,7 @@ Getting a sha512 hash:
 
 ## Basic Analysis of the Firmware: 💻🕵️  
 To gather basic strings and identify potential embedded information in the firmware before performing further analysis:
-Commands:
+
 ```bash
    file doorbell.bin                # Determine the file type
 
