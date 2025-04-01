@@ -123,24 +123,30 @@ Probe for the flash chip:
    flashrom --programmer ch341a_spi
 ```
 >**💡Important:**
-> Always probe first to try and get the name of the chip.
-
-Read and dump the firmware:
+>Always probe first to try and get the name of the chip.
+## Ok, Let's get hands on: ✋🤚 
+<details>
+<summary> Read and dump the firmware: </summary>
+Commands:
 ```bash
-    flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-1.bin
+   flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-1.bin
 ```
 
 It is a good idea to dump the firmware twice just to make sure you have the complete image.
+
 ```bash
-    flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-2.bin
+   flashrom --programmer ch341a_spi --chip [Chip Name] --read doorbell-2.bin
 ```
 
 Then compare image 1 with image 2 and if there are no differences, you know you have the entire, non-corrupted image:
 ```bash
    diff --side-by-side doorbell-1.bin doorbell-2.bin
 ```
+</details>
+
 ## Before we begin analysis, it's a good idea to first get a hash of the image:
-There are several command line utilities that we could use for this including `sha256sum,` `sha512sum` and `md5sum.`
+<details>
+<summary> There are several command line utilities that we could use for this including sha256sum, sha512sum and md5sum. </summary>
 
 Getting a md5 hash:
 ```bash
@@ -160,6 +166,7 @@ Getting a sha512 hash:
    090ba7fcc514530399953de1e65dfc08851aabf08905eab21d501c0630900d445deda27634b5f70b5fe3861ffa735d001987ece7739f31e84a3e8c2f03a0b178  doorbellfirm.bin
 
 ```
+</details>
 
 ## Basic Analysis of the Firmware: 💻🕵️  
 To gather basic strings and identify potential embedded information in the firmware before performing further analysis:
