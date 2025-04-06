@@ -175,6 +175,7 @@ Getting a sha512 hash:
 ## Basic Analysis of the Firmware: 💻🕵️  
 To gather basic strings and identify potential embedded information in the firmware before performing further analysis:
 
+
 ```bash
    file doorbell.bin                # Determine the file type
 
@@ -194,7 +195,10 @@ To unpack the firmware and extract embedded files or hidden elements, I used bin
    binwalk -eM doorbell.bin         # Extract known file types (-e), and recursively scan extracted files (-M)
 ```
 ## Basic Analysis of the Firmware's Filesystem: 🗃🕵️
-
+<details>
+<summary>🖱Click here to expand</summary>
+If you want to follow along, I have included the passwd & shadow files in this repo.
+  
 #### We are performing <ins>*static*</ins> analysis, later in the series we look at <ins>*dynamic*</ins> analysis.
 
 ##### Here are some of the things we are looking for:
@@ -270,6 +274,8 @@ $ john hash.txt --show
   
        1 password hash cracked, 0 left
  ```
+</details>
+
 ## Password: 🗝 The password for the root user is <ins>tina.</ins>
 I think it's safe to say that ***tina*** comes from ***Tina Linux*** and that implies that default passwords are being used. I was able to verify this by performing the same steps on another doorbell, same manufacturer. 
 The password was in fact the same, ***tina***. 
