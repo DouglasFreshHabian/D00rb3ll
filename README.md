@@ -32,6 +32,9 @@ Whether you’re a Linux enthusiast, a security researcher, a reverse engineer, 
   3. Computer running Linux (kali Linux, Ubuntu)
 
 ## Methodology: 🔍🌍
+<details>
+  
+<summary>🖱 Click here to expand</summary>
 
 In this video we gained a non-interactive shell on an IoT device by connecting a *usb-to-ttl* adpater
 to the RX and TX pads on the board of the device. We used `minicom` for a serial shell with a baud 
@@ -75,6 +78,8 @@ installed, checks for an internet connection and proceeds to execute two command
 the ip address, `geoiplookup` and `whois`. It prints the results to the screeen and saves the results
 to a file. As of right now, it only deals with ip addresses. Perhaps we can add the some sort of
 similiar functionality for urls too...
+
+</details>
 
 We learned a lot about this firmware just from a log file. One of perhaps the most important things, was that it is using a Linux based operating system based of off ***OpenWRT***. 
 The name of this operating system is ***Tina Linux.*** If you haven't done so already, go over to my youtube channel, hit that like button, subscribe and check out the next video...
