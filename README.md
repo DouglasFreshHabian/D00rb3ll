@@ -13,7 +13,7 @@ The goal of this project is to offer a transparent look into the firmware of a w
 
 Whether you’re a Linux enthusiast, a security researcher, a reverse engineer, or a hacker, this project aims to provide useful resources to help uncover how the firmware operates and potentially identify vulnerabilities, security flaws, or other points of interest.
 
-## 📷 ["Hacking an IoT Video Doorbell - What's Inside?"](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
+## 📷 [Hacking an IoT Video Doorbell - What's Inside?](https://youtu.be/dVZNmC5-uO4?si=WXdHWTCoSJMnTiCV)
 
 ### ![Hacking an IoT Doorbell - Youtube Thumbnail.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-1.png)
 
@@ -100,9 +100,9 @@ The name of this operating system is ***Tina Linux.*** If you haven't done so al
 ```
 >**💡Tip:**
 > You can use `sed` to display only lines 36 to 47 from the Bootlogs.txt file.
+---
 
-
-## ["Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware"](https://youtu.be/fGCQTk4-eE4?si=HizJNpvhUviEKrlf) 
+## [Hacking an IoT Video Doorbell: Extracting & Analyzing Firmware](https://youtu.be/fGCQTk4-eE4?si=HizJNpvhUviEKrlf) 
 
 ### ![Hacking an IoT Doorbell - Youtube Thumbnail-2.](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Thumbnail-Video-2.png)
 
@@ -285,9 +285,32 @@ $ john hash.txt --show
 I think it's safe to say that ***tina*** comes from ***Tina Linux*** and that implies that default passwords are being used. I was able to verify this by performing the same steps on another doorbell, same manufacturer. 
 The password was in fact the same, ***tina***. 
 
-## ["Hacking an IoT Doorbell: Automated Analysis"](https://www.youtube.com/watch?v=GhEeZATJi2Y)
+---
+
+## [Hacking an IoT Doorbell: Automated Analysis](https://www.youtube.com/watch?v=GhEeZATJi2Y)
 
 ### ![Hacking an IoT Doorbell - Youtube Video 3 Thumbnail](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Video-3-Thumbnail.png)
+
+## 🔍 Automated Firmware Analysis Overview
+In this video, we dive into automating the firmware analysis process using a powerful suite of tools to save time, reduce manual effort, and uncover potential vulnerabilities in IoT firmware. Using a low-cost video doorbell as the target, we follow the **OWASP Firmware Security Testing Methodology** and move from manual to automated analysis techniques.
+
+## 🧰 Tools Featured in the Video
+
+Tool             | Purpose                                                                    | Link
+---------------- | -------------------------------------------------------------------------- | -----
+[linPEAS](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)          | detects SSH keys, passwords, and misconfigs                                | https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+[firmwalker](https://github.com/scriptingxss/firmwalker)      | Scans extracted firmware FS for secrets, keys, configs, hardcoded creds    | https://github.com/scriptingxss/firmwalker
+[checksec.sh](https://github.com/petervas/checksec.sh)     | Evaluates binary security (NX, PIE, RELRO, stack canaries, etc.)           | https://github.com/slimm609/checksec.sh
+[ClamAV](https://clamav.net)           | Scans for known malware, viruses, and threats within extracted files       | https://www.clamav.net 
+[ChatGPT](https://chat.openai.com)         | Assists in analyzing shell scripts and interpreting logic                  | https://chat.openai.com 
+
+---
+
+
+## 📄 Bonus Resources
+OWASP Firmware Security Testing Methodology: Followed throughout the series. Available via Doug’s [Fresh PDF Library GitHub repo](https://github.com/DouglasFreshHabian/FreshPDFLibrary).
+
+This episode marks a key shift from **manual analysis** to **scalable, repeatable automation**, making it easier to spot security flaws in embedded devices.
 
 ## Contributing & Collaboration: 🤝
 
@@ -313,13 +336,47 @@ Your thoughts, questions, and feedback are greatly appreciated! Feel free to ope
 
 Thank you for checking out [D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
 
+# Support D00rb3ll™️
 
-### Resources: [FreshPdfLibrary](https://github.com/DouglasFreshHabian/FreshPdfLibrary)
-In this repo, you find the guide that I am using in this series as well as a lot more!!!
+Thank you for using and supporting **D00rb3ll™**! If this project has helped you, or if you appreciate the work put into it, there are several ways you can support the project.
 
-#### If you have not done so already, please head over to the channel and hit that subscribe button to show some support. Thank you!!!
+Your support helps with continued development, testing, and future features. Any contribution is highly appreciated!
 
-### Support Me: 👊 [https://www.youtube.com/@DouglasHabian-tq5ck](https://www.youtube.com/@DouglasHabian-tq5ck) 
+## 💖 Ways to Support
+
+### ☕💜  Buy Me a Coffee
+If you'd like to buy me a coffee to show your appreciation, click the link below:
+[Buy Me a Coffee](https://www.buymeacoffee.com/dfreshZ)
+
+### 💙☕  Ko-fi:
+Support me on Ko-fi and get exclusive updates and perks:
+[Support on Ko-fi](https://ko-fi.com/thefreshlab)
+
+## 🛍  Fresh Forensics Store (Shopify)
+Check out my Shopify 🛒 Store for creative artwork, custom Linux tools, and open-source solutions! 
+[Fresh Forensics Store](https://t10fpe-zh.myshopify.com)
+
+### 💖 GitHub Sponsors
+You can sponsor me directly on GitHub for long-term support:
+[Sponsor on GitHub](https://github.com/sponsors/DouglasFreshHabian)
+
+### Amazon Affiliate Links
+Purchase any products through Amazon by clicking on my affiliate links and I get a small percentage!
+[Full List of Affiliate Links](https://github.com/DouglasFreshHabian/D00rb3ll/PRODUCTS.md)
+
+## 🙏 Thank You!
+
+Every contribution, whether it's financial, code contributions, or simply using and promoting the project, hels make REPOSITORY™ even better. Thank you for your support!
+
+Your generosity allows me to continue developing and maintaining the project for the benefit of everyone. 🌟
+
+---
+
+## 🌟 Stay Fresh!
+
+If you haven't already, don't forget to subscribe to my YouTube channel to stay updated with new features and other cool content!
+
+[YouTube Channel](https://www.youtube.com/@DouglasHabian-tq5ck)
 
 
 
