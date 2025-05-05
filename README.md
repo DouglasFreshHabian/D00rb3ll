@@ -285,6 +285,10 @@ $ john hash.txt --show
 I think it's safe to say that ***tina*** comes from ***Tina Linux*** and that implies that default passwords are being used. I was able to verify this by performing the same steps on another doorbell, same manufacturer. 
 The password was in fact the same, ***tina***. 
 
+## ["Hacking an IoT Doorbell: Automated Analysis"](https://www.youtube.com/watch?v=GhEeZATJi2Y)
+
+### ![Hacking an IoT Doorbell - Youtube Video 3 Thumbnail](https://github.com/DouglasFreshHabian/D00rb3ll/blob/main/Graphics/Video-3-Thumbnail.png)
+
 ## Contributing & Collaboration: 🤝
 
 #### This is an open project, and I welcome contributions and feedback from the community. If you have insights, improvements, or additional findings related to the firmware, please feel free to submit issues or pull requests.
