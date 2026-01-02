@@ -330,58 +330,19 @@ This episode marks a key shift from **manual analysis** to **scalable, repeatabl
 - [ ] Binary Exploitaion
 #### As I continue to reverse engineer the firmware, I will document my findings and methodologies here. 
 
-## Feedback & Questions:❓❔❓
+## ☕ Support This Project
 
-Your thoughts, questions, and feedback are greatly appreciated! Feel free to open an issue or leave a comment. Let’s collaborate and make this project even better.
+If **D00rb3ll™** helped you in any way, consider supporting continued development:
 
-Thank you for checking out [D00rb3ll](https://github.com/DouglasFreshHabian/d00rb3ll). Stay tuned for future updates, and happy reverse engineering!
-
-# Support D00rb3ll™️
-
-Thank you for using and supporting **D00rb3ll™**! If this project has helped you, or if you appreciate the work put into it, there are several ways you can support the project.
-
-Your support helps with continued development, testing, and future features. Any contribution is highly appreciated!
-
-## 💖 Ways to Support
-
-### ☕💜  Buy Me a Coffee
-If you'd like to buy me a coffee to show your appreciation, click the link below:
-[Buy Me a Coffee](https://www.buymeacoffee.com/dfreshZ)
-
-### 💙☕  Ko-fi:
-Support me on Ko-fi and get exclusive updates and perks:
-[Support on Ko-fi](https://ko-fi.com/thefreshlab)
-
-## 🛍  Fresh Forensics Store (Shopify)
-Check out my Shopify 🛒 Store for creative artwork, custom Linux tools, and open-source solutions! 
-[Fresh Forensics Store](https://t10fpe-zh.myshopify.com)
-
-### 💖 GitHub Sponsors
-You can sponsor me directly on GitHub for long-term support:
-[Sponsor on GitHub](https://github.com/sponsors/DouglasFreshHabian)
-
-### Amazon Affiliate Links
-Purchase any products through Amazon by clicking on my affiliate links and I get a small percentage!
-[Full List of Affiliate Links](https://github.com/DouglasFreshHabian/D00rb3ll/PRODUCTS.md)
-
-## 🙏 Thank You!
-
-Every contribution, whether it's financial, code contributions, or simply using and promoting the project, hels make REPOSITORY™ even better. Thank you for your support!
-
-Your generosity allows me to continue developing and maintaining the project for the benefit of everyone. 🌟
+<p align="center">
+  <a href="https://www.buymeacoffee.com/dfreshZ" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
 
 ---
 
-## 🌟 Stay Fresh!
+<!-- 
+    Fresh Forensics, LLC | Douglas Fresh Habian | 2025
+    github.com/DouglasFreshHabian
+    freshforensicsllc@tuta.com
+-->
 
-If you haven't already, don't forget to subscribe to my YouTube channel to stay updated with new features and other cool content!
-
-[YouTube Channel](https://www.youtube.com/@DouglasHabian-tq5ck)
-
-
-
-
-
-
-
-<!-- dfresh@tutanota.com Fresh Forensics, LLC 2025 -->
